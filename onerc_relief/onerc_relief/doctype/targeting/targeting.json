@@ -1,0 +1,156 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-11-08 15:47:26.761559",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "consent",
+  "section_break_miho",
+  "project_code",
+  "county",
+  "sub_county",
+  "column_break_flyq",
+  "ward",
+  "village",
+  "bio_data_and_household_dynamics_section",
+  "has_national_id",
+  "full_name",
+  "profile_photo",
+  "column_break_ajag",
+  "gender",
+  "marital_status",
+  "section_break_erms",
+  "alternate_full_name",
+  "alternate_id_number",
+  "column_break_ktun",
+  "alternate_photo_of_id"
+ ],
+ "fields": [
+  {
+   "default": "0",
+   "fieldname": "consent",
+   "fieldtype": "Check",
+   "label": "Consent"
+  },
+  {
+   "fieldname": "project_code",
+   "fieldtype": "Data",
+   "label": "Project Code"
+  },
+  {
+   "fieldname": "county",
+   "fieldtype": "Link",
+   "label": "County",
+   "options": "County"
+  },
+  {
+   "fieldname": "sub_county",
+   "fieldtype": "Select",
+   "label": "Sub County"
+  },
+  {
+   "fieldname": "ward",
+   "fieldtype": "Select",
+   "label": "Ward"
+  },
+  {
+   "fieldname": "village",
+   "fieldtype": "Data",
+   "label": "Village"
+  },
+  {
+   "fieldname": "section_break_miho",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_flyq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bio_data_and_household_dynamics_section",
+   "fieldtype": "Section Break",
+   "label": "Bio Data and Household Dynamics"
+  },
+  {
+   "fieldname": "has_national_id",
+   "fieldtype": "Select",
+   "label": "Has a National ID"
+  },
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "Full Name"
+  },
+  {
+   "fieldname": "profile_photo",
+   "fieldtype": "Attach Image",
+   "label": "Profile Photo"
+  },
+  {
+   "fieldname": "column_break_ajag",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "label": "Gender",
+   "options": "\nMale\nFemale\nOther\nPrefer Not to Say"
+  },
+  {
+   "fieldname": "marital_status",
+   "fieldtype": "Select",
+   "label": "Marital Status",
+   "options": "\nMarried\nWidow/ Widower\nDivorced/ Seperated\nSingle Parent (Never Married)"
+  },
+  {
+   "fieldname": "section_break_erms",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "alternate_full_name",
+   "fieldtype": "Data",
+   "label": "Full Name of Alternate"
+  },
+  {
+   "fieldname": "alternate_id_number",
+   "fieldtype": "Data",
+   "label": "Alternate ID Number"
+  },
+  {
+   "fieldname": "column_break_ktun",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "alternate_photo_of_id",
+   "fieldtype": "Attach Image",
+   "label": "Alternate Photo of ID"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-11-08 15:56:40.762223",
+ "modified_by": "Administrator",
+ "module": "Onerc Relief",
+ "name": "Targeting",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
