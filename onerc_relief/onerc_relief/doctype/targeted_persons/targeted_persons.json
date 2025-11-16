@@ -26,9 +26,9 @@
   },
   {
    "fieldname": "county",
-   "fieldtype": "Select",
+   "fieldtype": "Link",
    "label": "County",
-   "options": "\nNakuru\nTharaka Nithi\nNairobi"
+   "options": "County"
   },
   {
    "fieldname": "email",
@@ -83,7 +83,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-11-16 19:23:36.082634",
+ "modified": "2025-11-16 21:39:09.518959",
  "modified_by": "Administrator",
  "module": "Onerc Relief",
  "name": "Targeted Persons",
