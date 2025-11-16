@@ -5,9 +5,11 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "token",
+  "name_of_active_form",
+  "asset_uid",
+  "column_break_teot",
   "url",
-  "asset_uid"
+  "token"
  ],
  "fields": [
   {
@@ -28,14 +30,25 @@
   {
    "fieldname": "asset_uid",
    "fieldtype": "Data",
-   "label": "Asset UID"
+   "label": "Asset UID",
+   "reqd": 1
+  },
+  {
+   "fieldname": "name_of_active_form",
+   "fieldtype": "Data",
+   "label": "Name of Active Form",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_teot",
+   "fieldtype": "Column Break"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2025-11-15 22:15:21.567985",
+ "modified": "2025-11-16 08:12:20.042973",
  "modified_by": "Administrator",
  "module": "Onerc Relief",
  "name": "Kobo Settings",
