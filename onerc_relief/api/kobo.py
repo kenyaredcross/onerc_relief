@@ -43,7 +43,15 @@ def receive_kobo_submission():
 
 
         if kobo_field in data:
-            doc_fields[frappe_field] = data[kobo_field]
+
+            kobo_value = data[kobo_field]
+
+            #  Convert Kobo select options from snake_case to Capitalized
+            if "_" in kobo_value:
+                from onerc_relief.utils.kobo_helpers import capitalize_kobo_options
+                capitalize_kobo_options(kobo_value)
+
+            doc_fields[frappe_field] = data[kobo_value]
 
     existing = None
     if "updateby" in headers:
