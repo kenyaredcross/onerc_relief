@@ -46,6 +46,9 @@ def receive_kobo_submission():
 
             kobo_value = data[kobo_field]
 
+            # Default Value
+            kobo_value_sanitized = kobo_value
+
             #  Convert Kobo select options from snake_case to Capitalized
             if "_" in kobo_value:
                 from onerc_relief.utils.kobo_helpers import capitalize_kobo_options
