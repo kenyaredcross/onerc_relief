@@ -20,9 +20,11 @@ def receive_kobo_submission():
 
     headers = dict(frappe.request.headers)
 
-    doctype = headers.get("doctype")
-    if not doctype:
-        frappe.throw("'doctype' header not found!")
+    # doctype = headers.get("doctype")
+    # if not doctype:
+    #     frappe.throw("'doctype' header not found!")
+
+    doctype = "Targeted Persons"
     
     # if data.get("skipconnect") == "1":
     #     return {"status": "skipped"}
