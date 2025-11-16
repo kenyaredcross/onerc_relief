@@ -1,7 +1,6 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:uid",
  "creation": "2025-11-16 08:20:52.786583",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -84,11 +83,10 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-11-16 18:01:56.570905",
+ "modified": "2025-11-16 19:10:59.375267",
  "modified_by": "Administrator",
  "module": "Onerc Relief",
  "name": "Targeted Persons",
- "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
