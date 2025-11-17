@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "field:livlihood",
  "creation": "2025-11-17 20:56:16.834589",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -11,16 +12,18 @@
   {
    "fieldname": "livlihood",
    "fieldtype": "Data",
-   "label": "Livlihood"
+   "label": "Livlihood",
+   "unique": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-11-17 20:56:53.144351",
+ "modified": "2025-11-17 21:20:44.717895",
  "modified_by": "Administrator",
  "module": "Onerc Relief",
  "name": "Livlihood Options",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
@@ -39,5 +42,6 @@
  "row_format": "Dynamic",
  "sort_field": "creation",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "livlihood"
 }

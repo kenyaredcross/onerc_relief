@@ -10,6 +10,7 @@
   "column_break_leoz",
   "county",
   "email",
+  "livlihood",
   "column_break_poks",
   "file_upload",
   "age",
@@ -78,12 +79,18 @@
    "fieldtype": "Data",
    "label": "UID",
    "unique": 1
+  },
+  {
+   "fieldname": "livlihood",
+   "fieldtype": "Table MultiSelect",
+   "label": "Livlihood",
+   "options": "Livlihood Options Link"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-11-16 21:39:09.518959",
+ "modified": "2025-11-17 21:17:43.022409",
  "modified_by": "Administrator",
  "module": "Onerc Relief",
  "name": "Targeted Persons",
