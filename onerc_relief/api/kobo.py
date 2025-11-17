@@ -30,7 +30,6 @@ def receive_kobo_submission():
     #     return {"status": "skipped"}
 
     # Mapp the headers from kobo onto frappe
-
     doc_fields = {}
     for kobo_field, frappe_field in headers.items():
 
@@ -46,15 +45,16 @@ def receive_kobo_submission():
 
             kobo_value = data[kobo_field]
 
-            # Default Value
-            kobo_value_sanitized = kobo_value
+                        
 
             #  Convert Kobo select options from snake_case to Capitalized
             if "_" in kobo_value:
-                from onerc_relief.utils.kobo_helpers import capitalize_kobo_options
-                kobo_value_sanitized = capitalize_kobo_options(kobo_value)
+                from onerc_relief.utils.kobo_utils import cleanup_kobo_select_options
+                kobo_value_sanitized = cleanup_kobo_select_options(kobo_value)
+            else:
+                kobo_value_cleaned = kobo_value
 
-            doc_fields[frappe_field] = kobo_value_sanitized
+            doc_fields[frappe_field] = kobo_value_cleaned
 
     existing = None
     if "updateby" in headers:
