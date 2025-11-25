@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class TargatedPersons(Document):
+class TargetedPersons1(Document):
 	pass

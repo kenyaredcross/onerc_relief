@@ -92,7 +92,24 @@
   "number_of_pigs_you_own",
   "chicken",
   "number_of_chicken_you_own",
-  "int_obwq"
+  "number_of_live_births_occured_in_one_year",
+  "number_of_deaths_occured_in_the_last_12_month",
+  "current_condition_in_the_household",
+  "benefits_from_social_assisstance_programmes_section",
+  "benefits_from_the_national_safety_net_programmes",
+  "benefit_recieved_from_other_social_assisstance_programme",
+  "name_the_programme_and_agency",
+  "type_of_benefit_you_recieved",
+  "specify_other_type_of_benefit_recieved",
+  "feedback_on_reponse",
+  "feedback_on_response_process",
+  "gender_analysis_section",
+  "gender_of_the_household_head",
+  "person_who_decides_how_to_spend_money",
+  "possibility_of_a_conflict_in_a_household_over_who_receives_cash",
+  "gender_division_in_the_household",
+  "elaborate",
+  "gps"
  ],
  "fields": [
   {
@@ -527,67 +544,185 @@
    "label": "Number of Sheep you own"
   },
   {
+   "depends_on": "eval:doc.do_you_own_a_livestock==\"Yes\"",
    "fieldname": "goats",
    "fieldtype": "Select",
-   "label": "Goats"
+   "label": "Goats",
+   "options": "\nYes\nNo"
   },
   {
+   "depends_on": "eval:doc.goats==\"Yes\"",
    "fieldname": "number_of_goats_you_own",
    "fieldtype": "Int",
    "label": "Number of Goats you own"
   },
   {
+   "depends_on": "eval:doc.do_you_own_a_livestock==\"Yes\"",
    "fieldname": "camels",
    "fieldtype": "Select",
-   "label": " Camels"
+   "label": " Camels",
+   "options": "\nYes\nNo"
   },
   {
+   "depends_on": "eval:doc.camels==\"Yes\"",
    "fieldname": "number_of__camels_you_own",
    "fieldtype": "Int",
    "label": "Number of  Camels you own"
   },
   {
+   "depends_on": "eval:doc.do_you_own_a_livestock==\"Yes\"",
    "fieldname": "donkeys",
    "fieldtype": "Select",
    "label": "Donkeys",
    "options": "\nYes\nNo"
   },
   {
+   "depends_on": "eval:doc.donkeys==\"Yes\"",
    "fieldname": "number_of_donkeys_you_own",
    "fieldtype": "Int",
    "label": "Number of Donkeys you own"
   },
   {
+   "depends_on": "eval:doc.do_you_own_a_livestock==\"Yes\"",
    "fieldname": "pigs",
    "fieldtype": "Select",
    "label": "Pigs",
    "options": "\nYes\nNo"
   },
   {
+   "depends_on": "eval:doc.pigs==\"Yes\"",
    "fieldname": "number_of_pigs_you_own",
    "fieldtype": "Int",
    "label": "Number of Pigs you own"
   },
   {
+   "depends_on": "eval:doc.do_you_own_a_livestock==\"Yes\"",
    "fieldname": "chicken",
    "fieldtype": "Select",
    "label": "Chicken",
    "options": "\nYes\nNo"
   },
   {
+   "depends_on": "eval:doc.chicken==\"Yes\"",
    "fieldname": "number_of_chicken_you_own",
    "fieldtype": "Int",
    "label": "Number of Chicken you own"
   },
   {
-   "fieldname": "int_obwq",
-   "fieldtype": "Int"
+   "description": "How many LIVE BIRTHS have occured in this household in the last 12 months (1 year)?",
+   "fieldname": "number_of_live_births_occured_in_one_year",
+   "fieldtype": "Int",
+   "label": "Number of LIVE BIRTHS occured in the last 12 month"
+  },
+  {
+   "description": "How many DEATHS have occurred in this household in the last 12 months (1 year)?",
+   "fieldname": "number_of_deaths_occured_in_the_last_12_month",
+   "fieldtype": "Int",
+   "label": "Number of DEATHS occured in the last 12 month"
+  },
+  {
+   "description": "This is based on the respondent perception but the interviewer should also assess the condition of the household to agree on a consesus",
+   "fieldname": "current_condition_in_the_household",
+   "fieldtype": "Select",
+   "label": "Current Condition in the household",
+   "options": "\nPoor\nFair\nGood\nVery Good"
+  },
+  {
+   "description": "Cash transfers both from the GOK and NGOs\n",
+   "fieldname": "benefits_from_social_assisstance_programmes_section",
+   "fieldtype": "Section Break",
+   "label": "BENEFITS FROM SOCIAL ASSISSTANCE PROGRAMMES"
+  },
+  {
+   "fieldname": "benefits_from_the_national_safety_net_programmes",
+   "fieldtype": "Select",
+   "label": "Benefits from the National Safety Net Programmes",
+   "options": "\nCash transfers for OVC (CT-OVC)\nHSNP Cash transfers\nCash tranfers to Persons living with severe disabilities (PWSD-CT)\nCash transfers to elderly persons (OP-CT)\nAll the above cash transfers\nNone"
+  },
+  {
+   "fieldname": "benefit_recieved_from_other_social_assisstance_programme",
+   "fieldtype": "Select",
+   "label": "Benefit recieved from other Social Assisstance Programme",
+   "options": "\nYes\nNo"
+  },
+  {
+   "depends_on": "eval:doc.benefit_recieved_from_other_social_assisstance_programme==\"Yes\"",
+   "fieldname": "name_the_programme_and_agency",
+   "fieldtype": "Data",
+   "label": "Name the PROGRAMME and AGENCY"
+  },
+  {
+   "depends_on": "eval:doc.benefit_recieved_from_other_social_assisstance_programme==\"Yes\"",
+   "fieldname": "type_of_benefit_you_recieved",
+   "fieldtype": "Select",
+   "label": " Type of BENEFIT you recieved",
+   "options": "\nCash\nIn-Kind\nOther"
+  },
+  {
+   "depends_on": "eval:doc.type_of_benefit_you_recieved==\"Other\"",
+   "fieldname": "specify_other_type_of_benefit_recieved",
+   "fieldtype": "Data",
+   "label": "Specify Other type of benefit recieved"
+  },
+  {
+   "fieldname": "feedback_on_reponse",
+   "fieldtype": "Select",
+   "label": "Feedback on reponse",
+   "options": "\nYes\nNo"
+  },
+  {
+   "depends_on": "eval:doc.feedback_on_reponse==\"Yes\"",
+   "fieldname": "feedback_on_response_process",
+   "fieldtype": "Data",
+   "label": "Feedback on response process"
+  },
+  {
+   "fieldname": "gender_analysis_section",
+   "fieldtype": "Section Break",
+   "label": "Gender Analysis"
+  },
+  {
+   "fieldname": "gender_of_the_household_head",
+   "fieldtype": "Select",
+   "label": "Gender of the household head",
+   "options": "\nMale\nFemale\nOther\nPrefer Not to Say"
+  },
+  {
+   "fieldname": "person_who_decides_how_to_spend_money",
+   "fieldtype": "Select",
+   "label": "Person who decides how to spend money",
+   "options": "\nMale household head/husband\nFemale household head/wife\nBoth husband and wife\nAll family (including children)"
+  },
+  {
+   "fieldname": "possibility_of_a_conflict_in_a_household_over_who_receives_cash",
+   "fieldtype": "Select",
+   "label": "Possibility of a conflict in a household over who receives cash",
+   "options": "\nYes\nNo"
+  },
+  {
+   "description": "Do you have a gendered division of labour/roles, work, activities, and responsibilities of women and men in this household?\n",
+   "fieldname": "gender_division_in_the_household",
+   "fieldtype": "Select",
+   "label": "Gender division in the household",
+   "options": "\nYes\nNo"
+  },
+  {
+   "depends_on": "eval:doc.gender_division_in_the_household==\"Yes\"",
+   "description": "If yes, kindly elaborate.",
+   "fieldname": "elaborate",
+   "fieldtype": "Data",
+   "label": "Elaborate"
+  },
+  {
+   "fieldname": "gps",
+   "fieldtype": "Geolocation",
+   "label": "GPS"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-11-25 10:07:08.190366",
+ "modified": "2025-11-25 15:45:59.393350",
  "modified_by": "Administrator",
  "module": "Onerc Relief",
  "name": "Targeted Persons",
