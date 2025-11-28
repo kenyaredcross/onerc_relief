@@ -1,0 +1,113 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-11-28 05:07:13.509351",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "county",
+  "frequency",
+  "number_of_tranches",
+  "column_break_udvb",
+  "number_targeted",
+  "type",
+  "section_break_hnip",
+  "base_transfer_value",
+  "column_break_ymsm",
+  "transactional_charges",
+  "column_break_ccyo",
+  "withdrawal_charges"
+ ],
+ "fields": [
+  {
+   "fieldname": "county",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "County",
+   "options": "County",
+   "reqd": 1
+  },
+  {
+   "fieldname": "base_transfer_value",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Base Transfer Value",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "default": "Monthly",
+   "fieldname": "frequency",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Frequency",
+   "options": "\nOne Off\nDaily\nWeekly\nMonthly\nAnnually\nCustom",
+   "reqd": 1
+  },
+  {
+   "description": "How many times will they receive the cash?",
+   "fieldname": "number_of_tranches",
+   "fieldtype": "Int",
+   "label": "Number of Tranches",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "number_targeted",
+   "fieldtype": "Int",
+   "label": "Number Targeted",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Type",
+   "options": "Households\nGroups",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_udvb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_hnip",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "transactional_charges",
+   "fieldtype": "Currency",
+   "label": "Transactional Charges",
+   "non_negative": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_ymsm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ccyo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "withdrawal_charges",
+   "fieldtype": "Currency",
+   "label": "Withdrawal Charges",
+   "non_negative": 1,
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-11-28 05:21:21.511966",
+ "modified_by": "Administrator",
+ "module": "Onerc Relief",
+ "name": "Location Details 121",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

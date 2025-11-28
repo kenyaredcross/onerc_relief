@@ -1,0 +1,181 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-11-28 04:57:52.392911",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_xqdr",
+  "amended_from",
+  "project_title",
+  "name_of_project",
+  "donor",
+  "donor_code",
+  "project_code",
+  "column_break_eggp",
+  "start_date",
+  "end_date",
+  "financial_service_provider",
+  "location_details_section",
+  "details",
+  "disbursment_details_section",
+  "total_budget",
+  "column_break_wepm",
+  "total_targeted_households",
+  "support_documents_section",
+  "communication_plan",
+  "column_break_dzco",
+  "memo"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_xqdr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "New 121 Project",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "name_of_project",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name of Project",
+   "reqd": 1
+  },
+  {
+   "fieldname": "donor_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Donor Code",
+   "reqd": 1
+  },
+  {
+   "fieldname": "project_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Project Code",
+   "reqd": 1
+  },
+  {
+   "default": "now",
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "fieldname": "column_break_eggp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "support_documents_section",
+   "fieldtype": "Section Break",
+   "label": "Support Documents"
+  },
+  {
+   "fieldname": "communication_plan",
+   "fieldtype": "Attach",
+   "label": "Communication Plan"
+  },
+  {
+   "fieldname": "column_break_dzco",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "memo",
+   "fieldtype": "Attach",
+   "label": "Memo"
+  },
+  {
+   "fieldname": "disbursment_details_section",
+   "fieldtype": "Section Break",
+   "label": "Disbursment Details"
+  },
+  {
+   "description": "A calculation of the total amount to be disbursed",
+   "fieldname": "total_budget",
+   "fieldtype": "Currency",
+   "label": "Total Budget (KES)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_wepm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_targeted_households",
+   "fieldtype": "Int",
+   "label": "Total Targeted Households",
+   "read_only": 1
+  },
+  {
+   "fieldname": "financial_service_provider",
+   "fieldtype": "Select",
+   "label": "Financial Service Provider",
+   "options": "Safaricom (MPESA)\nAirtel (Airtel Money)"
+  },
+  {
+   "fieldname": "location_details_section",
+   "fieldtype": "Section Break",
+   "label": "Location Details"
+  },
+  {
+   "fieldname": "details",
+   "fieldtype": "Table",
+   "label": "Details",
+   "options": "Location Details 121"
+  },
+  {
+   "fieldname": "project_title",
+   "fieldtype": "Data",
+   "label": "Project Title",
+   "read_only": 1
+  },
+  {
+   "fieldname": "donor",
+   "fieldtype": "Link",
+   "label": "Donor",
+   "options": "Donor",
+   "reqd": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-11-28 21:47:03.677974",
+ "modified_by": "Administrator",
+ "module": "Onerc Relief",
+ "name": "New 121 Project",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
